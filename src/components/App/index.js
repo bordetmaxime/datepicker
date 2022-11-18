@@ -69,7 +69,7 @@ const changeTime = (event) => {
 		</div>
 		{startDate ? <div className="timeInput">
 			<label for="appt">Choisissez une heure</label>
-<input onChange={changeTime} type="time" id="appt" name="appt" min="09:00" max="18:00" required />
+<input onChange={changeTime} type="time" id="appt" name="appt" required />
 </div>
 
 :
