@@ -61,7 +61,8 @@ const changeTime = (event) => {
 	 <div>
 	 <p className="textRdv">PRENDRE UN RENDEZ-VOUS <GoCalendar/></p>
 	 <form onSubmit={formSubmit} className='formulaire'>
-		 <div className="inputDiv"> <FiUser/>
+		 <div className="inputDiv">
+		<div> <FiUser/></div>
 		<input type="text" name="name" id="name" value={name} onChange={changeValue} placeholder='Name' required/>
 		<input type="text" name="surname" id="lastName" value={surname} onChange={changeValue} placeholder='Surname'  required/>
 		<input type="tel" name="telephone" id="number" value={telephone} onChange={changeValue}  placeholder='Telephone'  required/>
