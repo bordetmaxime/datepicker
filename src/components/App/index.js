@@ -1,14 +1,16 @@
 // == Import
 
 import "react-datepicker/dist/react-datepicker.css";
-import DatePicker, { registerLocale } from "react-datepicker";
 import React, { useState } from "react";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './styles.css';
+import { MdSend } from 'react-icons/md';
+import { GoCalendar } from 'react-icons/go';
+import { FiUser } from 'react-icons/fi';
+import { GiPartyPopper } from 'react-icons/gi';
 
-import fr from "date-fns/locale/fr"; // the locale you want
-registerLocale("fr", fr)
+
 
 
 // == Composant
@@ -54,12 +56,12 @@ const changeTime = (event) => {
 	return (
 		<div className="app">
 		
-	 {validate ? <p className="textValidation">{name} {surname} Vous avez rendez-vous le {startDate.toLocaleDateString("fr")} à {time}</p> : 
+	 {validate ? <p className="textValidation"><GiPartyPopper/> {name} {surname} Vous avez rendez-vous le {startDate.toLocaleDateString("fr")} à {time}</p> : 
 	 
 	 <div>
-	 <p className="textRdv">PRENDRE UN RENDEZ-VOUS</p>
+	 <p className="textRdv">PRENDRE UN RENDEZ-VOUS <GoCalendar/></p>
 	 <form onSubmit={formSubmit} className='formulaire'>
-		 <div className="inputDiv">
+		 <div className="inputDiv"> <FiUser/>
 		<input type="text" name="name" id="name" value={name} onChange={changeValue} placeholder='Name' required/>
 		<input type="text" name="surname" id="lastName" value={surname} onChange={changeValue} placeholder='Surname'  required/>
 		<input type="tel" name="telephone" id="number" value={telephone} onChange={changeValue}  placeholder='Telephone'  required/>
@@ -72,7 +74,7 @@ const changeTime = (event) => {
 :
 
 <Calendar locale='fr' id='datepicker' onChange={(date) => setStartDate(date)}  dateclassName="calendrier"/>}
-	 <button type="submit" className="buttonSubmit">Save</button>	 
+	 <button type="submit" className="buttonSubmit"> <MdSend/></button>	 
 	 </form>
 	 
 	 </div>

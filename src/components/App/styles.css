@@ -26,6 +26,8 @@
 	display: flex;
 	margin: auto;
 	text-align:center;
+	align-items: center;
+	font-size: 1.5rem;
 
 }
 
@@ -82,7 +84,8 @@ padding:15px
 	background-color:rgba(128, 0, 128, 0.637);
 	border-radius: 10px;
 	padding:8px;
-	width: 40%
+	width: 40%;
+	font-size:1.1rem
 }
 .buttonSubmit:hover{
 	transform: scale(1.02);
